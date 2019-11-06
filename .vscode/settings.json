@@ -1,0 +1,27 @@
+{
+    "cSpell.ignoreWords": [
+        "action",
+        "addtodo",
+        "case",
+        "const",
+        "date",
+        "default",
+        "done",
+        "export",
+        "false",
+        "function",
+        "id",
+        "initial",
+        "item",
+        "list",
+        "new",
+        "now",
+        "reducer",
+        "return",
+        "state",
+        "switch",
+        "text",
+        "todos",
+        "type"
+    ]
+}
