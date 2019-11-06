@@ -1,5 +1,6 @@
 import React, {useReducer, useState} from "react";
 import TodoList from "./TodoList";
+import "../Todo.css"
 import {reducer, initialState} from "../Reducers/Reducer"
 
 const TodoForm = () => {
@@ -14,14 +15,21 @@ const handleSubmit = e => {
 e.preventDefault();
 dispatch({ type: "ADDTODO", payload: input})
 setInput('')
-
 }
  
+const toggleDone = id => {
+    dispatch({ type: "TOGGLE", payload: id})
+  };
   
+  const clearDone = e => {
+e.preventDefault();
+dispatch({type: "CLEAR"})
+
+  }
     console.log("rendering form");
     return (
         <div>
-        <TodoList newList={state}/>
+        <TodoList newList={state} toggleDone={toggleDone}/>
       <form onSubmit={handleSubmit}>
         <label htmlFor="todoInput">New Todo:  </label>
         <input
@@ -34,6 +42,9 @@ setInput('')
         />
         <button>Add</button>
       </form>
+      <button className="clear-btn" onClick={clearDone}>
+        Clear Done
+      </button>
       </div>
     );
 

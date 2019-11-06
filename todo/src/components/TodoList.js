@@ -10,11 +10,9 @@ const TodoList = (props) => {
     <div className="todoList">
         {
           props.newList.map(todo => (
-        <Todo key={todo.id} todo={todo.item} />
+        <Todo key={todo.id} todo={todo} toggleDone={props.toggleDone} />
       ))}
-      <button className="clear-btn" >
-        Clear Done
-      </button>
+   
     </div>
   );
 };
