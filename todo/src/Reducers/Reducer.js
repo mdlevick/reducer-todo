@@ -15,7 +15,7 @@ export const list = [
 
 export const initialState = list;
 
-export function reducer(list, action) {
+export function reducer(state, action) {
   switch (action.type) {
     case "ADDTODO":
       const newItem = {
@@ -24,12 +24,12 @@ export function reducer(list, action) {
         id: Date.now()
       };
       if (newItem.item === ""){
-          return list
+          return state
       }else {
-      return [...list, newItem];}
+      return [...state, newItem];}
 
     case "TOGGLE":
-      return list.map(comp => {
+      return state.map(comp => {
         if (comp.id === action.payload) {
           return {
             ...comp,
@@ -40,10 +40,13 @@ export function reducer(list, action) {
         }
       });
       case "CLEAR":
-          return list.filter(item => {
+          return state.filter(item => {
             if (item.done === false) {
               return item;
             }
-          })
+           
+          }) 
+        case "default":
+                return state;
   }
 }
