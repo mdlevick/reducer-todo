@@ -1,22 +1,28 @@
 .App {
   text-align: center;
+  background: purple;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h2 {
   color: white;
+  line-height: 2rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.wrapper {
+  background: cornsilk;
+  width: 50%;
+  margin: 10vh auto;
 }
+
+.todoList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.Todo{
+  width: 30%;
+ text-align: center;
+}
+

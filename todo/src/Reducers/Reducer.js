@@ -2,15 +2,20 @@ import React, { useReducer } from "react";
 
 export const list = [
   {
-    item: "Learn about reducers",
+    item: "Find a Job",
     done: false,
     id: 3892987589
   },
   {
-    item: "Look like an idiot",
+    item: "Do What I Love",
     done: false,
-    id: 3984384722
-  }
+    id: 3892987590
+  },
+  {
+    item: "Make Good Money",
+    done: false,
+    id: 3892987591
+  },
 ];
 
 export const initialState = list;

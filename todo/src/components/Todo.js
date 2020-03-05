@@ -9,7 +9,7 @@ const Todo = props => {
       
     
  
-      <p>{props.todo.item}</p>
+      <h3>{props.todo.item}</h3>
       {console.log(props)}
     </div>
   );

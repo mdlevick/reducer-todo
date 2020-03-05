@@ -26,9 +26,9 @@ e.preventDefault();
 dispatch({type: "CLEAR"})
 
   }
-    console.log("rendering form");
+    
     return (
-        <div>
+        <div className="wrapper">
         <TodoList newList={state} toggleDone={toggleDone}/>
       <form onSubmit={handleSubmit}>
         <label htmlFor="todoInput">New Todo:  </label>
